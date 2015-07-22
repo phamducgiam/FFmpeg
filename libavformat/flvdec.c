@@ -396,7 +396,7 @@ static int amf_parse_object(AVFormatContext *s, AVStream *astream,
         break;
     case AMF_DATA_TYPE_OBJECT:
         if ((vstream || astream) && key &&
-            ioc->seekable &&
+            //ioc->seekable &&
             !strcmp(KEYFRAMES_TAG, key) && depth == 1)
             if (parse_keyframes_index(s, ioc, vstream ? vstream : astream,
                                       max_pos) < 0)
